@@ -12,6 +12,15 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+$(".name").click(changeToAnagramNameClick);
+
+function changeToAnagramNameClick (e) {
+	e.preventDefault();
+	var name = $(this).text();
+	var anagramName = anagrammedName(name);
+	$(this).text(anagramName);
+}
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
